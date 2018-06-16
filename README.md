@@ -44,7 +44,7 @@ Clone this repository to get the latest using the following command.
 
 Connect to PostgreSQL database.
 
-- `sudo -u postgres psql`
+- `sudo -u <UserName> psql postgres`
 
 Run create database script.
 
@@ -66,6 +66,8 @@ On another terminal.
 
 - `cd blockchain-explorer`
 - Modify config.json to update network-config.
+    - find config.json at app/platform/fabric
+    - NOTE FROM HUY : already configured to our networkStartup, just modify the absolute path of admin/certs 
 	- Change "fabric-path" to your fabric network path,
 	example: "/home/user1/workspace/fabric-samples" for the following keys: "tls_cacerts", "key", "cert".
 	- Final path for key "tls_cacerts" will be:  "/home/user1/workspace/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt".

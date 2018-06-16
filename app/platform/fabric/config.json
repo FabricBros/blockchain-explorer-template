@@ -1,0 +1,51 @@
+	{
+	"network-config": {
+		"org1": {
+			"name": "Org1",
+			"mspid": "Org1MSP",
+			"peer1": {
+				"requests": "grpc://127.0.0.1:7051",
+				"events": "grpc://127.0.0.1:7053",
+				"server-hostname": "peer0.org1.example.com"
+			},
+			"admin": {
+				"key": "/Users/huytran/MyCoolProjects/blockchain/coolnetwork/networkup/docker/crypto/v1.1/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore",
+				"cert": "/Users/huytran/MyCoolProjects/blockchain/coolnetwork/networkup/docker/crypto/v1.1/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts"
+			}
+		},
+		"org2": {
+			"name": "Org2",
+			"mspid": "Org2MSP",
+			"peer1": {
+				"requests": "grpc://127.0.0.1:8051",
+				"events": "grpc://127.0.0.1:8053",
+				"server-hostname": "peer0.org2.example.com"
+			},
+			"admin": {
+				"key": "/Users/huytran/MyCoolProjects/blockchain/coolnetwork/networkup/docker/crypto/v1.1/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore",
+				"cert": "/Users/huytran/MyCoolProjects/blockchain/coolnetwork/networkup/docker/crypto/v1.1/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts"
+			}
+		}
+	},
+	"channel": "foo",
+		"pg":{
+			"host":"127.0.0.1",
+			"port":"5432",
+			"database":"fabricexplorer",
+			"username":"hppoc",
+			"passwd":"password"
+		},
+	"orderers":[
+				{
+				"mspid": "OrdererMSP",
+				"server-hostname":"orderer.example.com",
+				"requests":"grpc://127.0.0.1:7050"
+				}
+				],
+	"keyValueStore": "/tmp/fabric-client-kvs",
+	"configtxgenToolPath": "/Users/huytran/Hyperledger/GettingStarted/PlatformSpecBin/bin",
+	"eventWaitTime": "30000",
+	"license": "Apache-2.0",
+	"version": "1.1"
+	}
+
