@@ -41,6 +41,8 @@ Clone this repository to get the latest using the following command.
 - `cd blockchain-explorer`.
 
 ## Database setup
+Download postgres first and install
+To run : pg_ctl -D <location of postgresh> start
 
 Connect to PostgreSQL database.
 
@@ -55,6 +57,7 @@ Run db status commands.
 
 - `\l` view created fabricexplorer database
 - `\d` view created tables
+- `\q` exit
 
 ## Fabric network setup
 
