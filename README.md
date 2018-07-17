@@ -52,7 +52,8 @@ Run create database script.
 
 - `\i app/persistance/postgreSQL/db/explorerpg.sql`
 - `\i app/persistance/postgreSQL/db/updatepg.sql`
-
+- RUN from CMD LINE - psql -U $USER -d fabricexplorer -a -f app/persistance/postgreSQL/db/explorerpg.sql
+- Run from CMD LINE - psql -U $USER -d fabricexplorer -a -f app/persistance/postgreSQL/db/updatepg.sql
 Run db status commands.
 
 - `\l` view created fabricexplorer database
@@ -75,7 +76,7 @@ On another terminal.
 	example: "/home/user1/workspace/fabric-samples" for the following keys: "tls_cacerts", "key", "cert".
 	- Final path for key "tls_cacerts" will be:  "/home/user1/workspace/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt".
 
-- Modify config.json to update one of the channel
+- Modify /app/persistance/postgreSQL/db/pgconfig.json to update one of the channel
 	- pg host, username, password details.
 ```json
  "channel": "mychannel",

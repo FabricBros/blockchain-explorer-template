@@ -4,6 +4,9 @@
   "description": "hyperledger-explorer",
   "private": true,
   "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
   "keywords": [
     "fabric-client sample app",
     "v1.1.1 fabric nodesdk sample"
