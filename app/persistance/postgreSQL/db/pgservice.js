@@ -15,6 +15,8 @@
  */
 
 const { Client } = require("pg");
+// const util = require('util');
+// const setTimeoutPromise = util.promisify(setTimeout);
 var config = require("./pgconfig.json");
 var pgconfig = config.pg;
 var helper = require("../../../helper.js");
@@ -40,11 +42,17 @@ logger.info(
 const client = new Client({
   connectionString: connectionString
 });
+var count = 0
 
 async function handleDisconnect() {
   var port = pgconfig.port ? pgconfig.port : "5432";
 
   try {
+    //
+    // setTimeoutPromise(40, count)
+    //     .then((value) => {   // value === 'foobar' (passing values is optional)   // This is executed after about 40 milliseconds. 
+    //
+    //        })
 
     client.on("error", err => {
       console.log("db error", err);
